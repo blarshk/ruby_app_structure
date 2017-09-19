@@ -1,0 +1,12 @@
+source "https://rubygems.org"
+
+gem "roda"
+gem "rack"
+gem "json"
+gem "puma"
+gem "sequel"
+gem "pg"
+gem "dotenv"
+gem "pry"
+gem "bunny"
+gem "moirai", git: "https://github.com/creditera/moirai.git", branch: "v0.2.0"

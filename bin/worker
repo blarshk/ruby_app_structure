@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+require_relative "../http_app"
+require "moirai"
+
+config_file = "config/moirai.yml"
+
+supervisor = Moirai::Supervisor.from_file config_file
+supervisor.start

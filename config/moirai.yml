@@ -1,0 +1,9 @@
+health-check:
+  port: 3050
+  rack-handler: puma
+workers:
+  - worker_class_name: Accounts::RabbitWorker
+    count: 5
+    args:
+      :topic: hello
+      :routing_key: suh
