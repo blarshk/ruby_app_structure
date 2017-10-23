@@ -1,5 +1,4 @@
 require "nsq_ruby"
-require_relative "../interface"
 
 class Accounts
   module Messages
@@ -7,17 +6,14 @@ class Accounts
       module V1
         extend self
 
-        def for(account)
+        def for account
           {
             meta: {
               current_version: "v1"
             },
             id: account.id,
             type: "accounts",
-            attributes: {
-              plan_id: account.plan.id,
-              partner_id: account.partner.id
-            }
+            attributes: {}
           }
         end
       end
